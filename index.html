@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <title>Portfolio Tailwind CSS</title>
+    <link href="dist/css/final.css" rel="stylesheet" />
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a href="#home" class="block py-6 text-lg font-bold text-primary">HANIF MARSHAL</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Home</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">About</a>
+                </li>
+                <li class="group">
+                  <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+                </li>
+                <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-primary md:text-xl">Hallo 👋, I'am <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Hanif Marshall</span></h1>
+            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">A Web Developer</h2>
+            <p class="mb-10 font-medium leading-relaxed text-secondary">The Best Solution for Your System Problem</p>
+
+            <a href="#contact" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Contact Us</a>
+          </div>
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:right-0 lg:mt-9">
+              <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="577.00869" height="614.65067" viewBox="0 0 577.00869 614.65067" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M582.47657,494.53924c-40.4127,0-86.85714-44.84621-127.94893-23.53859-124.415,64.51367-107.28858-43.43994-143.032-83.58887l1.17347-2.35367c39.43875,35.36308,88.67933,64.1353,142.3988,83.20477,48.54556,17.23457,97.45513,25.21994,141.42331,23.11263l.07631,2.8291Q589.6025,494.54063,582.47657,494.53924Z" transform="translate(-311.49566 -142.67466)" fill="#f2f2f2"/><path d="M877.47357,233.88537c-32.21551,24.39974-96.31582,16.69148-116.20791,58.48688-60.228,126.54525-111.754,30.14827-164.48777,19.72362l-.48562-2.58477c52.79008,4.37844,109.41448-2.4151,163.75112-19.64751,49.10434-15.5713,92.91452-38.7355,126.692-66.96178l1.76893,2.20918Q883.15494,229.5841,877.47357,233.88537Z" transform="translate(-311.49566 -142.67466)" fill="#f2f2f2"/><ellipse cx="89.54489" cy="152.32747" rx="8.44737" ry="11.32747" fill="#e6e6e6"/><ellipse cx="444.54489" cy="258.32747" rx="8.44737" ry="11.32747" fill="#e6e6e6"/><ellipse cx="212.54489" cy="11.32747" rx="8.44737" ry="11.32747" fill="#e6e6e6"/><path d="M675.48474,560.80583l-9.8235-59.07561a4.577,4.577,0,0,1,3.76-5.25985l44.6152-7.41893a4.577,4.577,0,0,1,5.25982,3.76l9.82351,59.0756a4.577,4.577,0,0,1-3.75994,5.25985l-44.6152,7.41893A4.577,4.577,0,0,1,675.48474,560.80583Z" transform="translate(-311.49566 -142.67466)" fill="#3f3d56"/><path d="M675.9399,542.39344l-6.31545-37.97915a4.28642,4.28642,0,0,1,3.52133-4.926l38.343-6.37595a4.28662,4.28662,0,0,1,4.92622,3.52129l8.74159,52.56925a4.28662,4.28662,0,0,1-3.52155,4.92605l-23.75269,3.94977A19.09378,19.09378,0,0,1,675.9399,542.39344Z" transform="translate(-311.49566 -142.67466)" fill="#fff"/><path d="M677.59479,513.97881a4.1886,4.1886,0,0,1,3.441-4.81367l26.59846-4.423a4.184,4.184,0,1,1,1.37265,8.25469l-26.59846,4.423A4.1886,4.1886,0,0,1,677.59479,513.97881Z" transform="translate(-311.49566 -142.67466)" fill="#00bfa6"/><path d="M679.73,526.81945a4.18859,4.18859,0,0,1,3.441-4.81367l26.59846-4.423a4.184,4.184,0,1,1,1.37265,8.25469l-26.59846,4.423A4.18859,4.18859,0,0,1,679.73,526.81945Z" transform="translate(-311.49566 -142.67466)" fill="#00bfa6"/><path d="M681.86526,539.66009a4.18859,4.18859,0,0,1,3.441-4.81367l26.59847-4.423a4.184,4.184,0,1,1,1.37264,8.25469l-26.59846,4.423A4.1886,4.1886,0,0,1,681.86526,539.66009Z" transform="translate(-311.49566 -142.67466)" fill="#00bfa6"/><path d="M655.34018,505.12533a11.9666,11.9666,0,0,1,2.69128-18.151L642.46928,412.8735l20.62637,7.93046,11.94088,70.79225a12.03148,12.03148,0,0,1-19.69635,13.52912Z" transform="translate(-311.49566 -142.67466)" fill="#ffb8b8"/><polygon points="336.978 596.816 353.955 596.815 362.032 531.329 336.975 531.33 336.978 596.816" fill="#ffb6b6"/><path d="M644.14261,733.94717l4.77875-.0002,18.657-7.58735,9.99957,7.58619h.00135a21.30874,21.30874,0,0,1,21.30758,21.30724v.69242l-54.74319.002Z" transform="translate(-311.49566 -142.67466)" fill="#2f2e41"/><polygon points="183.573 574.742 198.768 582.315 235.209 527.31 212.783 516.133 183.573 574.742" fill="#ffb6b6"/><path d="M493.66529,710.52409l4.277,2.13161,20.0824,1.53223L523.59,725.43824l.00121.0006a21.30872,21.30872,0,0,1,9.56488,28.57489l-.30888.6197L483.85193,730.2145Z" transform="translate(-311.49566 -142.67466)" fill="#2f2e41"/><path d="M655.99546,442.0777l-107.94908,2.81607,1.87737,52.56651s-1.87737,14.08031,1.87738,17.83506,5.63213,3.75475,3.75475,10.32557-6.7309,69.3528-6.7309,69.3528-44.30536,78.33949-42.428,80.21687,3.75475,0,1.87737,4.69344-3.75475,2.81606-1.87737,4.69343a69.13645,69.13645,0,0,1,4.69344,5.63213h30.59782s1.71108-9.38688,1.71108-10.32556,1.87737-6.57082,1.87737-7.5095,53.4588-57.57829,53.4588-57.57829l11.26425-93.86876,27.22195,91.99139s0,80.72713,1.87737,82.60451,1.87738.93869.93869,4.69344-4.69344,2.81606-1.87738,5.63212,3.75475-1.87737,2.81607,2.81607l-.93869,4.69344,36.06365.40282s3.75475-7.91233,1.87737-10.72839-1.76473-2.04737.52567-6.65581,3.22908-5.54713,2.2904-6.48582-.93869-5.93147-.93869-5.93147S666.321,499.33765,666.321,496.52159a9.36293,9.36293,0,0,1,.77978-4.22293v-3.82244L663.505,474.93177Z" transform="translate(-311.49566 -142.67466)" fill="#2f2e41"/><path d="M753.30623,704.21131l.93144-20.94324a67.64032,67.64032,0,0,1,31.54965-7.98643c-15.15276,12.3885-13.25912,36.26927-23.53234,52.92887A40.68573,40.68573,0,0,1,732.41971,747.012l-12.68037,7.76379a68.17642,68.17642,0,0,1,14.36987-55.24594A65.85484,65.85484,0,0,1,746.212,688.28429C749.249,696.29218,753.30623,704.21131,753.30623,704.21131Z" transform="translate(-311.49566 -142.67466)" fill="#f2f2f2"/><polygon points="288.604 115.052 342.675 224.404 332.096 357.116 263.002 350.803 250.612 131.022 288.604 115.052" fill="#2f2e41"/><path d="M676.02493,485.13955l-31.59571-2.88818-.04883-.40088L623.17727,306.29092l4.74512-13.15576a19.26545,19.26545,0,0,1,14.41406-12.32666V280.808a19.18106,19.18106,0,0,1,22.48828,15.34277l5.67432,30.64893,8.0498,103.60254Z" transform="translate(-311.49566 -142.67466)" fill="#2f2e41"/><path d="M593.763,273.94334l6.37215-15.24555,19.7219.34625,20.56478,29.08951,21.58466,90.773s7.7526,66.30952,0,69.81-34.02915-.8224-34.02915-.8224Z" transform="translate(-311.49566 -142.67466)" fill="#00bfa6"/><path d="M619.857,259.044s42.48294,24.55778,44.14462,37.37694,7.225,169.7186,7.225,169.7186l-15.02345-9.7077-4.106-57.18443L633.7623,282.16886Z" transform="translate(-311.49566 -142.67466)" fill="#2f2e41"/><circle cx="298.33255" cy="80.27277" r="28.95364" fill="#ffb8b8"/><path d="M576.98677,203.92295c3.25118-5.02977,9.3522-8.382,15.2667-7.44a20.848,20.848,0,0,1,34.93176-12.16009,6.48287,6.48287,0,0,1,6.33977-.63448,13.36724,13.36724,0,0,1,5.15061,4.13432,30.00055,30.00055,0,0,1,4.19793,30.52028c.72284-2.62776-1.91061-5.09988-4.57143-5.68956-2.66059-.58967-5.45161-.0318-8.14982-.4158-3.45822-.49207-6.56688-2.49823-10.03057-2.94972-2.911-.37944-5.83834.36689-8.677,1.115-2.83868.748-5.75853,1.51089-8.6736,1.16475-2.91529-.34615-6.6704,10.70164-6.62,18.483.00958,1.47463-.29415,3.36792-1.73526,3.68077-1.77472.38536-2.80311-2.06408-4.49231-2.73151a3.12509,3.12509,0,0,0-3.83309,2.03832,5.095,5.095,0,0,0,.97275,4.56254,15.0557,15.0557,0,0,0,3.65021,3.16646l-.6957.57861c-1.15722,1.52879-3.55764,1.595-5.22564.64919a11.27835,11.27835,0,0,1-3.75191-4.272c-3.08586-5.1326-5.79274-10.60132-6.88178-16.49039S573.73583,208.95271,576.98677,203.92295Z" transform="translate(-311.49566 -142.67466)" fill="#2f2e41"/><path d="M513.9213,418.35173l57.84537-62.05992a6.484,6.484,0,0,1,9.15373-.32174l46.869,43.6861a6.484,6.484,0,0,1,.32171,9.15371l-57.84536,62.05991a6.484,6.484,0,0,1-9.15371.32177l-46.869-43.6861A6.484,6.484,0,0,1,513.9213,418.35173Z" transform="translate(-311.49566 -142.67466)" fill="#e6e6e6"/><path d="M534.98817,402.958l37.18825-39.89774a6.07233,6.07233,0,0,1,8.57274-.30133l40.28,37.54453a6.07258,6.07258,0,0,1,.30155,8.57295l-51.47451,55.22488a6.0726,6.0726,0,0,1-8.573.30112l-24.9526-23.25806A27.049,27.049,0,0,1,534.98817,402.958Z" transform="translate(-311.49566 -142.67466)" fill="#fff"/><path d="M568.32206,380.27141a5.93375,5.93375,0,0,1,8.37725-.29445l27.94213,26.04456a5.92726,5.92726,0,0,1-8.08279,8.67169l-27.94214-26.04455A5.93375,5.93375,0,0,1,568.32206,380.27141Z" transform="translate(-311.49566 -142.67466)" fill="#e6e6e6"/><path d="M555.74883,393.76072a5.93373,5.93373,0,0,1,8.37724-.29445l27.94213,26.04455a5.92726,5.92726,0,1,1-8.08279,8.6717L556.04328,402.138A5.93373,5.93373,0,0,1,555.74883,393.76072Z" transform="translate(-311.49566 -142.67466)" fill="#e6e6e6"/><path d="M543.17559,407.25a5.93376,5.93376,0,0,1,8.37725-.29445L579.495,433.00013a5.92726,5.92726,0,0,1-8.08279,8.6717L543.47,415.62727A5.93375,5.93375,0,0,1,543.17559,407.25Z" transform="translate(-311.49566 -142.67466)" fill="#e6e6e6"/><path d="M611.16209,481.22039l-19.99867,28.63577-.93219,1.12287a11.10632,11.10632,0,0,1-6.34034,3.78514q-.52772.106-1.05988.15855a10.832,10.832,0,0,1-1.31838.05416c-.25212-.00448-.504-.01847-.75481-.04024a11.07826,11.07826,0,0,1-4.17677-1.21708l-8.53241-5.95887a3.42278,3.42278,0,0,1-1.3641-1.98117,3.47355,3.47355,0,0,1-.08344-1.21657,3.42,3.42,0,0,1,.59781-1.587l24.6254-35.26072a3.44149,3.44149,0,0,1,4.78594-.84995l13.70261,9.56963c.03244.02266.06366.04553.09559.06891.0204.01532.04081.03064.0602.0474.02761.02036.05422.04215.07959.06417.03382.02683.06591.0546.09749.08309.0287.02648.0574.053.08559.08016l.01673.016c.03584.03468.07117.07009.10478.10643.03411.03561.06793.07318.09981.11046.02309.02684.04638.05491.069.08248l.00238.00273c.06578.08241.12833.16792.18641.25674.01869.027.03637.05543.05333.08336l.00779.01188c.01414.02274.02757.045.04049.06795.03976.06746.07679.13729.11209.20805a3.53257,3.53257,0,0,1,.153.35994c.01452.0391.02731.07914.03939.11867.01077.03218.021.0651.02957.09894l.00252.00713.00362.01325c.00889.02873.01656.05768.0235.08613.01419.05494.02663.11083.03786.16693.00333.0152.00666.03039.00949.04631.00333.01519.00543.03061.00826.04652.00333.0152.00543.03061.008.0453l.00436.02449c.00682.04551.01241.09125.01729.13648.00632.057.01143.11416.01387.17056.00336.0474.00529.09379.006.1404.00127.04271.0011.08442.00042.12684a.2898.2898,0,0,1-.00119.03242c-.00045.04365-.00285.087-.00526.13039-.00651.10914-.01935.21814-.03631.32534-.00673.04035-.01367.07947-.02184.11881-.0091.04834-.01963.09568-.03089.14252-.0038.01772-.00883.03566-.01334.05288-.00667.02645-.01406.05239-.02146.07833-.00818.0286-.01686.05793-.02576.086l-.022.06832c-.01357.04093-.02808.08013-.04309.12-.00905.02371-.0181.04742-.02838.07135a3.43514,3.43514,0,0,1-.247.49348c-.01237.01925-.02351.03828-.03588.05752C611.22127,481.1341,611.19229,481.17713,611.16209,481.22039Z" transform="translate(-311.49566 -142.67466)" fill="#fff"/><circle cx="286.12309" cy="336.69752" r="2.93561" fill="#00bfa6"/><path d="M564.45545,510.394a11.9666,11.9666,0,0,1,2.69128-18.15095l-15.56218-74.10088,20.62637,7.93046,11.94088,70.79225A12.03148,12.03148,0,0,1,564.45545,510.394Z" transform="translate(-311.49566 -142.67466)" fill="#ffb8b8"/><path d="M553.02786,480.3251l-8.39454-54.08692-3.15429-103.876,2.34424-31.13428a19.18,19.18,0,0,1,20.70605-17.67334,19.26629,19.26629,0,0,1,15.65723,10.70361l6.1333,12.56885-2.18994,177.22559Z" transform="translate(-311.49566 -142.67466)" fill="#2f2e41"/><path d="M817.06512,755.77212a1.54861,1.54861,0,0,1-1.5533,1.55322H397.46165a1.55322,1.55322,0,0,1,0-3.10644H815.51182A1.54866,1.54866,0,0,1,817.06512,755.77212Z" transform="translate(-311.49566 -142.67466)" fill="#ccc"/><path d="M587.15556,234.68325a2,2,0,1,1,3.34,1.59273l3.36145,5.52392a1,1,0,0,1-1.70852,1.03971l-3.7795-6.211A1.99455,1.99455,0,0,1,587.15556,234.68325Z" transform="translate(-311.49566 -142.67466)" fill="#fff"/><rect x="589.01042" y="235.82042" width="1" height="3" rx="0.5" transform="translate(911.24023 41.08244) rotate(153.23663)" fill="#2f2e41"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4 class="mb-3 text-lg font-bold uppercase text-primary">About Me</h4>
+            <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">I'am a Frontend Developer</h2>
+            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Programming languages ​​that are mastered include php and javascripts, as well as boostrap and tailwindcss</p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Social Media</h3>
+            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
+              You can find me on my social media account.
+            </p>
+            <div class="flex items-center">
+              <!-- Youtube -->
+              <a
+                href="https://youtube.com/"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>YouTube</title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/hanifmarshall"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+
+              <!-- Twitter -->
+              <a
+                href="https://twitter.com/hanifmarshall"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Twitter</title>
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+
+              <!-- TikTok -->
+              <a
+                href="https://tiktok.com/"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+              </a>
+
+              <!-- LinkedIn -->
+              <a
+                href="https://linkedin.com/in/hanifmarshall"
+                target="_blank"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
+                <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section End -->
+
+    <!-- Portfolio Section Start -->
+    
+    <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Recents Project</h2>
+            <p class="text-md font-medium text-secondary md:text-lg">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus porro consequuntur alias, commodi nemo enim aliquam ipsam obcaecati? Assumenda, ipsam?
+            </p>
+          </div>
+        </div>
+
+        <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/se.png" alt="Landing Page" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Suara Edukasi</h3>
+            <p class="text-base font-medium text-secondary">Pusat Teknologi Informasi dan Komunikasi Pendidikan (PUSTEKKOM), Kementerian Pendidikan Nasional memiliki tugas dan fungsi untuk mengembangkan, membina, dan mengevaluasi kegiatan di bidang teknologi pendidikan dan pendayagunaan TIK untuk pendidikan..</p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="overflow-hidden rounded-md shadow-md">
+              <img src="dist/img/ppni.png" alt="E-Commerce" width="w-full" />
+            </div>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Persatuan Perawat Indonesia</h3>
+            <p class="text-base font-medium text-secondary">Sistem Informasi Manajemen Data Anggota.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Portfolio Section End -->
+
+  
+    <!-- Contact Section Start -->
+    <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
+            <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl"></h2>
+            <p class="text-md font-medium text-secondary md:text-lg">Send your message in the form bellow.</p>
+          </div>
+        </div>
+
+        <form>
+          <div class="w-full lg:mx-auto lg:w-2/3">
+            <div class="mb-8 w-full px-4">
+              <label for="name" class="text-base font-bold text-primary">Nama</label>
+              <input type="text" id="name" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+            </div>
+            <div class="mb-8 w-full px-4">
+              <label for="email" class="text-base font-bold text-primary">Email</label>
+              <input type="email" id="email" class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+            </div>
+            <div class="mb-8 w-full px-4">
+              <label for="message" class="text-base font-bold text-primary">Pesan</label>
+              <textarea type="email" id="email" class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+            </div>
+            <div class="w-full px-4">
+              <button class="w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Kirim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark pt-24 pb-12">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-white">Hanif Marshall</h2>
+            <h3 class="mb-2 text-2xl font-bold">Find Me</h3>
+            <p>hanifmarshall19@gmail.com</p>
+            <p>Jl. Ahmad Muchtar, Sawangan Lama, Depok</p>
+            <p>Jawa Barat</p>
+          </div>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white"></h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#" class="mb-3 inline-block text-base hover:text-primary"></a>
+              </li>
+              <li>
+                <a href="#" class="mb-3 inline-block text-base hover:text-primary"></a>
+              </li>
+              <li>
+                <a href="#" class="mb-3 inline-block text-base hover:text-primary"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="mb-12 w-full px-4 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Menu</h3>
+            <ul class="text-slate-300">
+              <li>
+                <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Home</a>
+              </li>
+              <li>
+                <a href="#about" class="mb-3 inline-block text-base hover:text-primary">About Me</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="mb-3 inline-block text-base hover:text-primary">Portfolio</a>
+              </li>
+              
+              <li>
+                <a href="#contact" class="mb-3 inline-block text-base hover:text-primary">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="w-full border-t border-slate-700 pt-10">
+          <div class="mb-5 flex items-center justify-center">
+            <!-- Youtube -->
+            <a
+              href="https://youtube.com/"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>YouTube</title>
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                />
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="https://instagram.com/hanifmarshall"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+
+            <!-- Twitter -->
+            <a
+              href="https://twitter.com/hanifmarshall"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Twitter</title>
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+
+            <!-- TikTok -->
+            <a
+              href="https://tiktok.com/"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>TikTok</title>
+                <path
+                  d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://linkedin.com/in/hanifmarshall"
+              target="_blank"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+            >
+              <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>LinkedIn</title>
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p class="text-center text-xs font-medium text-slate-500">
+            Dibuat oleh <a href="https://instagram.com/hanifmarshall" target="_blank" class="font-bold text-primary">Hanif Marshall</a>, menggunakan
+            <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to top Start -->
+    <a href="#home" class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse" id="to-top">
+      <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+    </a>
+    <!-- Back to top End -->
+
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
